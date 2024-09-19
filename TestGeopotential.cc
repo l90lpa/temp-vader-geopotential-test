@@ -143,7 +143,7 @@ int main() {
 
     {
         std::vector<std::vector<std::vector<double>>> raw_test_geopotential;
-        jf.at("outputs").get_to(raw_test_geopotential);
+        jf.at("geopotential").get_to(raw_test_geopotential);
         auto [test_geopotential, lvls, lons, lats] = vectorsToField("test_geopotential", raw_test_geopotential);
 
         // find the max absolute difference between geopotential and test_geopotential
